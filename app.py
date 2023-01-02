@@ -16,7 +16,7 @@ if os.environ["STREAMLIT_APP_MODE"] == "test":
 else:
     gsheet = Gsheet(st.secrets['gsheet_configs'])
 
-df = gsheet.get_sheet_data("badminton_tracking", "Form Responses 1").drop(["Timestamp", "result"], axis=1)
+df = gsheet.get_sheet_data("Badminton_Records", "Form Responses 1").drop(["Timestamp", "result"], axis=1)
 df.columns = ["date", "team_1_player_1", "team_1_player_2", "team_2_player_1", "team_2_player_2", "points_team_1", "points_team_2", "venue"]
 
 df['winner'] = np.where(df.points_team_1 > df.points_team_2, 'team_1', 'team_2')
