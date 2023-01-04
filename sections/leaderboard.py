@@ -25,6 +25,6 @@ def display_leaderboard(df, players_list):
 
     leaderboard_df = pd.DataFrame(leaderboard).sort_values("wins_pct", ascending=False)
     leader_board_fig = utils.create_go_table_figure(leaderboard_df)
-    leader_board_fig.update_traces(cells_fill_color=[np.where(leaderboard_df['wins_pct'] == leaderboard_df['wins_pct'].max(), '#91D8E4', '#eceff1')])
+    leader_board_fig.update_traces(cells_fill_color=[np.where(leaderboard_df['wins_pct'] == leaderboard_df['wins_pct'].max(), '#b5de2b', '#eceff1')])
     leader_board_fig.update_layout(margin=dict(t=0))
     leaderboard_cols[0].plotly_chart(leader_board_fig)

@@ -34,5 +34,3 @@ st.markdown(f"<hr><h5>{icons.STADIUM}&nbsp;Venue Wise stats</h5>", unsafe_allow_
 venue_section.display_venue_stats(df)
 
 st.markdown("<hr>", unsafe_allow_html=True)
-
-

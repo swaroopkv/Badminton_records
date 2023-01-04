@@ -13,7 +13,7 @@ def display_venue_stats(df: pd.DataFrame):
         y="total_games",
         color="point_bins",
         template="plotly_white",
-        color_discrete_sequence=px.colors.sequential.purples,
+        color_discrete_sequence=px.colors.sequential.Viridis_r,
         title="Total Games played at different venues",
         width=600
     )
@@ -30,7 +30,7 @@ def display_venue_stats(df: pd.DataFrame):
         }).reset_index(),
         values="total_games",
         names="venue",
-        color_discrete_sequence=px.colors.sequential.purples,
+        color_discrete_sequence=px.colors.sequential.Viridis_r,
         hole=0.4,
         title="Venue Most Visited",
         width=350
