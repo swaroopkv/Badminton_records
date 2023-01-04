@@ -19,7 +19,7 @@ def display_player_win_loss_stats(player_matches: pd.DataFrame):
         names=player_win_loss_df.index,
         template="plotly_white",
         color=player_win_loss_df.index,
-        color_discrete_map={"win":'#b5de2b', "loss":'lightslategrey'},
+        color_discrete_map={"win":'#371B58', "loss":'lightslategrey'},
         hole=0.3
     )
     win_loss_pie.update_layout(width=300, showlegend=False, margin=dict(l=50, b=0, t=0))
@@ -71,7 +71,7 @@ def display_player_partner_stats(player_matches: pd.DataFrame, player):
 
     partner_list = player_partner_stats.index.to_list()
     bar_colors = ['lightslategrey' for i in range(player_partner_stats.shape[0])]
-    bar_colors[partner_list.index(player_partner_stats['win_pct'].idxmax())] = '#b5de2b'
+    bar_colors[partner_list.index(player_partner_stats['win_pct'].idxmax())] = '#371B58'
 
     partner_bar_chart = go.Figure(
         go.Bar(
@@ -107,7 +107,7 @@ def display_player_daily_stats(player_matches: pd.DataFrame, player):
         color='result',
         barmode="group",
         template="simple_white",
-        color_discrete_sequence=['#b5de2b', 'lightslategrey'],
+        color_discrete_sequence=['#371B58', 'lightslategrey'],
         title=f"{player}'s Daily Performance",
         height=300,
         width=400
