@@ -69,14 +69,14 @@ def create_go_table_figure(df):
             values=df.columns, 
             align="left", 
             height=40, 
-            fill_color="lightslategrey", 
+            fill_color="#371B58", 
             font=dict(color="white", size=16, family="Arial")
         ),
         cells=dict(
             values=[df[i] for i in df.columns], 
             align="left", 
             height=30,
-            fill_color='#eceff1'
+            fill_color='#7858A6'
         )
     )
     fig = go.Figure(go_table)
